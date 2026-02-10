@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    list-style: none;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f5f5f5;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+html{
+    scroll-behavior: smooth;
+}
+                                        /*responsive*/
+nav ul :where(#menu-close-button,#menu-open-button){
+    font-size:large;
+}
+nav ul #menu-close-button{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+nav ul #menu-close-button{
+    display: none;
+}
+nav #menu-open-button{
+    display: none;
+}
+                                      /*fin responsive*/
+nav ul{
+ display: flex;
+ flex-direction:row;
+ padding: 10px 20px;
+ gap: 40px;
+}
+nav li{
+    display: flex;
+    font-size: 20px;
+    font-style: italic;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+header nav ul li a{
+    display: block;
+    transition: 0.3s ease;
+}
+header nav ul li a:hover{
+ background-color: orange;
+ color: white;
+ padding: 8px 18px;
+ border-radius: 50px;
+}
+/*Page d'accueil*/
+
+.accueil-sect{
+    background-color: #f5f5f5;
+    padding: 50px 0 100px;
+}
+.accueil-sect .accueil-contrner{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+.accueil-titre1{
+    font-size: 25px;
+    font-style: italic;
+    font-family: "Miniver",sans-serif;
+}
+.accueil-titre2{
+    font-size: 22px;
+    font-style: italic;
+    font-family: "Miniver",sans-serif;
+}
+.accueil-text{
+    font-size: 22px;
+    font-style: italic;
+    font-family: "Miniver",sans-serif;
+}
+.accueil-button{
+    display: flex;
+    padding: 30px 30px;
+    gap: 25px;
+}
+.commander{
+    padding: 8px 18px;
+    background-color: orange;
+    color: white;
+    font-size: 17px;
+    border-radius: 50px;
+}
+.commander:hover{
+  background-color: #f5f5f5;
+  border: 2px solid orange;
+  color: black;
+}
+.contact{
+    padding: 8px 18px;
+    background-color:white;
+    border: 2px solid orange;
+    border-radius: 50px;
+    font-size: 17px;
+}
+.contact:hover{
+    background-color: orange;
+    color:black;
+    border: 2px solid white ;
+}
+.Image{
+    max-width: 83%;
+}
+.image-a{
+    width: 300px;
+    height:100% ;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/*responsive*/
+@media screen and (max-width:1024px) {
+     nav ul{
+        display: block;
+        position: fixed;
+        left:-300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background-color: white;
+    }
+
+    nav ul li{
+        font-size: large;
+        display: block;
+        margin-top: 17px;
+    }
+
+    nav ul #menu-close-button{
+       display:block;
+    }
+
+    nav #menu-open-button{
+    display:block;
+    }
+
+    /*accueil-sect*/
+
+    .accueil-contrner{
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        font-size: small;
+    }
+    .accueil-button{
+       justify-content: center;
+    }
+
+     /*A propos*/
+    .apropos-sect .apropos-contener{
+        flex-direction: column;
+        justify-content: center;
+    }   
+    /*gallerie*/
+    .gallerie-sect .gallerie-list{
+        width: 100%;
+    }
+    /*temoignage*/
+     .swiper-button-prev,
+     .swiper-button-next{
+      display: none;
+      }
+}
+
+/*A propos*/
+.apropos-sect{
+    padding: 55px 0 100px;
+}
+.apropos-sect .apropos-contener{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+.apropos-sect .apropos-contener .image-b{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.section-titre {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px 40px;
+    font-size:25px;
+}
+.section-titre::after{
+    content:"";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    background-color: orange;
+    border-radius: 2px;
+}
+.texte-apropos{
+    font-size: 25px;
+    text-align: center;
+}
+
+.rezo-sociau{
+      display: flex;
+      font-size: 20px;
+      gap: 10px;
+      padding: 8px 18px;
+      justify-content: center;
+      transition: 0.3s ease;
+}
+
+.rezo-sociau a i:hover{
+   color: orange;
+}
+
+/*menu*/
+.menu-sect{
+    padding: 50px 0 100px;
+    background: rgb(101, 98, 98);
+}
+.menu-sect .menu-contener .menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.menu-sect .menu-contener .menu-list .menu-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc((100% /3) - 30px);
+}
+
+.menu-item h3{
+    margin: 15px 0 8px;
+}
+.menu-item p{
+    max-width: 260px;
+}
+.menu-sect .menu-contener .menu-list .menu-item .photo{
+    width: 200px;
+    height:200px ;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+}
+/*@media screen and (max-width:600px) {
+    .menu-sect .menu-contener .menu-list .menu-item{
+        width: 100%;
+    }
+    .menu-sect{
+        padding: 40px 0 70px;
+    }
+    .menu-item p{
+         max-width: 90%;
+    }
+}*/
+@media screen and (max-width:601px) and  (max-width:900px){
+   .menu-sect .menu-contener .menu-list .menu-item {
+    width: calc((100% /2 ) - 30px);
+   }
+   /*temoignage*/
+   .swiper-button-prev,
+   .swiper-button-next{
+    display: none;
+   }
+}
+/*temoignage*/
+.temoignage-section{
+    padding: 50px 0;
+}
+.card-list .card-item{
+user-select: none;
+padding: 35px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+justify-content: center;
+background: rgba(183, 174, 174, 0.2);
+border: 1px solid orange;
+}
+.card-list .card-item .image-temoignage{
+ width: 150px;
+ height: 150px;
+ border-radius: 50%;
+ border: 2px solid orange;
+ margin-bottom: 26px;
+}
+.card-list .card-item .Name-t{
+    margin-bottom: 30px;
+}
+/*slider*/
+.slider-wrapper{
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+.swiper-button-prev,
+.swiper-button-next{
+    color: orange;
+}
+
+
+/*gallerie*/
+
+.gallerie-sect{
+    padding: 50px 0 100px;
+}
+.gallerie-sect .gallerie-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+}
+.gallerie-sect .gallerie-list .gallerie-item{
+    width: calc((100% / 3) - 32px);
+}
+.gallerie-sect .gallerie-item .image-g{
+    width: 100%;
+    height: 100%;
+    border-radius:2%;
+    object-fit: cover;
+    cursor: zoom-in;
+    transition: 0.2s ease;
+}
+.gallerie-sect .gallerie-item:hover .image-g{
+    transform: scale(1.2);
+}
+/*Contact*/
+.contact-sect{
+    padding: 50px 0 100px;
+}
+.contact-sect .contact-contener{
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content:space-around;
+}
+.contact-sect .contact-list .contact-info{
+    display: flex;
+    gap: 48px;
+    margin-bottom: 20px;
+}
+.contact-sect .contact-list .contact-info i p{
+    font-size: 48px;
+}
+
+
+/*formulaire*/
+.contac-form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* champs simples */
+.form-input{
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+/* bouton simple */
+.sumit{
+ padding: 8px 18px;
+ border-radius: 50px;
+ background-color: orange;
+ border: 2px solid white;
+ transition: 0.3s ease;
+}
+.sumit:hover{
+    background-color: #f5f5f5;
+}
+@media screen and (max-width:768px) {
+    .contact-sect .contact-contener{
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+    }
+     /*footer*/
+     .footer-section .footer-contener{
+        flex-direction: column;
+        align-items: center;
+     }
+
+}
+/*footer*/
+.footer-section{
+    background-color: rgb(34, 32, 32);
+    padding: 20px 0;
+}
+
+.footer-section .footer-contener{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.footer-section 
+:where(.copyright,.rezo-sociau,
+.policy-text,.policy-think,.piont){
+    color: white;
+    font-size: 20px;
+}
+.policy-think{
+    transition: 0.2s ease;
+}
+.policy-think:hover{
+    color: orange;
+}

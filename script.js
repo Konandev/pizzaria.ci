@@ -4,11 +4,11 @@ const menu = document.querySelector("nav ul");
 
 //ouverture du menu
 openbtn.addEventListener("click", () => {
-  menu.style.left= "0";
+   menu.classList.add('active')
 });
 //fermerture du menu
 closebtn.addEventListener("click", () => {
-  menu.style.left= "-300px";
+  menu.classList.remove('active')
 });
 
 //swiper du temoignage
